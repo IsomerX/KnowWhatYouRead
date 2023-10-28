@@ -1,11 +1,17 @@
 {
-    "name": "Covid-19 Stats UK",
+    "name": "KnowWhatYouRead",
     "version": "1.0.0",
-    "description": "latest covid data of UK",
+    "description": "Get the most out of your blogs.",
     "manifest_version": 3,
-    "author": "Sampurna Chapagain",
+    "author": "Dhruv Bakshi",
     "action":{
         "default_popup": "index.html",
-        "default_title": "Latest Covid Report"
-    }
+        "default_title": "KnowWhatYouRead"
+    },
+    "content_scripts": [
+      {
+          "matches": ["https://dev.to/*"],
+          "js": ["scripts/content.js"]
+      }
+    ]
 }
